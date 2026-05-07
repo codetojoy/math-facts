@@ -1,0 +1,10 @@
+target/
+project/target/
+project/project/
+logs/
+.bsp/
+.idea/
+.vscode/
+*.iml
+.DS_Store
+RUNNING_PID

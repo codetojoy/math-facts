@@ -1,0 +1,27 @@
+@()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Math Facts</title>
+    <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/main.css")">
+</head>
+<body>
+    <main>
+        <h1>Math Facts</h1>
+        <p>Enter an integer to check if it is prime.</p>
+        <div>
+            <input type="number" data-bind="value: input, valueUpdate: 'input'" placeholder="e.g. 17" />
+            <button data-bind="click: submit, enable: canSubmit">Check</button>
+        </div>
+        <p data-bind="visible: hasResult">
+            <strong data-bind="text: resultText"></strong>
+        </p>
+        <p class="error" data-bind="visible: error, text: error"></p>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="@routes.Assets.versioned("javascripts/mathfacts.js")"></script>
+</body>
+</html>
